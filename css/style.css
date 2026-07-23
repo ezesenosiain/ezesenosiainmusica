@@ -42,11 +42,14 @@ nav {
   gap: 1rem;
 }
 
+.navbar-menu {
+  display: none;
+} 
+
 .navbar-icon {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  items-align: center;
 }
 
 .navbar-icon a {
@@ -59,15 +62,96 @@ nav {
   border-radius: 100%;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background: #090909;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: top center;
+    opacity: 0;
+    animation: heroSlider 20s infinite;
+}
+
+.slide:nth-child(1) {
+    background-image: url("../img/banner1.webp");
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    background-image: url("../img/banner2.webp");
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    background-image: url("../img/banner3.webp");
+    animation-delay: 10s;
+}
+
+.slide:nth-child(4) {
+    background-image: url("../img/banner4.webp");
+    animation-delay: 15s;
+}
+
+@keyframes heroSlider {
+
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
 @media (max-width: 1024px) {
   .navbar-container {
   padding: 0rem 2rem 0rem 2rem;
+  }
+
+  .navbar-menu {
+  display: none;
+  } 
+
+  .hero {
+  height: 70vh;
   }
 }
 
 @media (max-width: 768px) {
   .navbar-container {
   padding: 0rem 2rem 0rem 2rem;
+  }
+
+  .navbar-menu {
+  display: block;
+  } 
+
+  .navbar-menu a img {
+  height: 2rem;
+  } 
+
+  .hero {
+  height: 60vh;
   }
 
   .navbar-list {
