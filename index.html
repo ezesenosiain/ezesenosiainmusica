@@ -9,6 +9,9 @@
   <title>Ezequiel Senosiain Música</title>
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -140,11 +143,103 @@
       <div class="title-container">
         <h2>Videos</h2>
       </div>
+
+      <div class="video-card" data-video="gJ23t1LAoVU">
+        <img src="https://img.youtube.com/vi/gJ23t1LAoVU/maxresdefault.jpg" alt="Video">
+        <div class="play-button">
+          <img src="img/icon-play.svg" alt="Play">
+        </div>
+        <h3>Todo siguió igual</h3>
+      </div>
+
+      <div class="cards-music">
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=gJ23t1LAoVU">
+          <img src="https://img.youtube.com/vi/gJ23t1LAoVU/maxresdefault.jpg" alt="Video">
+
+          <div class="play-button">
+            ▶
+          </div>
+
+          <h3>Cómo pudiste ft. Juanes</h3>
+        </div>
+
+        <div class="video-modal">
+          <div class="modal-content">
+
+            <button class="close-video">✕
+
+            </button>
+
+            <iframe id="youtubePlayer" allowfullscreen>
+            </iframe>
+
+          </div>
+        </div>
+
+        <div class="card-music-container">
+          <div class="card-music-content">
+            <img src="img/cover-findelladoa.webp" alt="Fin del lado A" class="disc-cover">
+            <h3>Fin del lado A</h3>
+            <p>Ezequiel Senosiain</p>
+            <p class="music-year">Disco • 2023</p>
+          </div>
+          <div class="icon-play">
+            <a href="https://open.spotify.com/intl-es/album/6UKOVWnMzSbBM662RzM1a7?si=0-JkX3CyQ8q1DPiOK93d9A"
+              target="_blank">
+              <img src="img/icon-play.svg" alt="Play">
+            </a>
+          </div>
+        </div>
+
+        <div class="card-music-container">
+          <div class="card-music-content">
+            <img src="img/cover-todoloquefue.webp" alt="Todo lo que fue" class="disc-cover">
+            <h3>Todo lo que fue</h3>
+            <p>Ezequiel Senosiain</p>
+            <p class="music-year">Single • 2023</p>
+          </div>
+          <div class="icon-play">
+            <a href="https://open.spotify.com/intl-es/track/05XVFDAAZY1Ipnfu5CLjnl?si=95dc203174614f52" target="_blank">
+              <img src="img/icon-play.svg" alt="Play">
+            </a>
+          </div>
+        </div>
+
+        <div class="card-music-container">
+          <div class="card-music-content">
+            <img src="img/cover-escenica.webp" alt="Después del letargo" class="disc-cover">
+            <h3>Después del letargo</h3>
+            <p>Escénica</p>
+            <p class="music-year">Disco • 2025</p>
+          </div>
+          <div class="icon-play">
+            <a href="https://open.spotify.com/intl-es/album/4aRHLbcKeiA76E1z8jkJA0?si=Go7uL-JCRTO-aL_GE3U2ag"
+              target="_blank">
+              <img src="img/icon-play.svg" alt="Play">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <a class="button" href="sections/musica.html">
+          Ver más
+        </a>
+      </div>
     </section>
   </div>
   <footer>
     <p>Copyright © 2026 • Ezequiel Senosiain</p>
   </footer>
+
+  <div class="video-modal">
+    <div class="modal-content">
+      <button class="close-video">✕
+      </button>
+      <iframe id="youtubePlayer" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 
