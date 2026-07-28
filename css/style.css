@@ -296,6 +296,31 @@ p {
   border-radius: 8px;
 }
 
+.cards-video {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 10rem;
+}
+
+.video-card-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:relative;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  gap: 0.25rem;
+}
+
+.video-card-2 img{
+  width:100%;
+  display:block;
+  border-radius: 8px;
+}
+
 .play-button{
   position:absolute;
   top: 50%;
@@ -376,6 +401,16 @@ footer {
     width:100%;
     padding: 0rem 1rem;
   }
+
+  .cards-video {
+    flex-direction: column;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  .cards-video {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem 0rem;
+  }
 }
 
 @media(max-width:768px) {
@@ -402,10 +437,5 @@ footer {
 
   .hero {
     height: 60vh;
-  }
-
-  .cards-music {
-    flex-direction: column;
-    padding: 0.5rem 1rem 0.5rem 1rem;
   }
 }

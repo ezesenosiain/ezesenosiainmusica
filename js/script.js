@@ -8,7 +8,7 @@ menuButton.addEventListener("click", () => {
 
 });
 
-const cards = document.querySelectorAll(".video-card");
+const cards = document.querySelectorAll(".video-card, .video-card-2");
 
 const modal = document.querySelector(".video-modal");
 
