@@ -403,13 +403,8 @@ footer {
   }
 
   .cards-video {
-    flex-direction: column;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-  }
-
-  .cards-video {
     grid-template-columns: repeat(1, 1fr);
-    margin: 1rem 0rem;
+    margin: 1rem;
   }
 }
 
