@@ -1,40 +1,109 @@
 const menuButton = document.querySelector(".menu-button");
 const mobileMenu = document.querySelector(".mobile-menu");
 
+// Menú hamburguesa
+if (menuButton && mobileMenu) {
+    menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+    });
+}
 
-menuButton.addEventListener("click", () => {
-
-    mobileMenu.classList.toggle("active");
-
-});
+// ====================
+// Modal de videos
+// ====================
 
 const cards = document.querySelectorAll(".video-card, .video-card-2");
-
 const modal = document.querySelector(".video-modal");
-
 const player = document.querySelector("#youtubePlayer");
+const closeVideo = document.querySelector(".close-video");
 
-cards.forEach(card=>{
+if (cards.length && modal && player) {
 
-    card.addEventListener("click",()=>{
+    cards.forEach(card => {
 
-        const id = card.dataset.video;
+        card.addEventListener("click", () => {
 
-        player.src =
-        `https://www.youtube.com/embed/${id}?autoplay=1`;
+            const id = card.dataset.video;
 
-        modal.classList.add("active");
+            player.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+
+            modal.classList.add("active");
+
+        });
 
     });
 
+}
+
+if (closeVideo && modal && player) {
+
+    closeVideo.addEventListener("click", () => {
+
+        modal.classList.remove("active");
+
+        player.src = "";
+
+    });
+
+}
+
+// ====================
+// Galería de fotos
+// ====================
+
+const galleryItems = document.querySelectorAll(".gallery-item");
+const imageModal = document.querySelector(".image-modal");
+const modalImage = document.querySelector("#modalImage");
+const closeImage = document.querySelector(".close-image");
+
+if (galleryItems.length && imageModal && modalImage) {
+
+    galleryItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const image = item.querySelector("img");
+
+            modalImage.src = image.src;
+
+            imageModal.classList.add("active");
+
+        });
+
+    });
+
+}
+
+if (closeImage && imageModal && modalImage) {
+
+    closeImage.addEventListener("click", () => {
+
+        imageModal.classList.remove("active");
+
+        modalImage.src = "";
+
+    });
+
+}
+
+imageModal.addEventListener("click", (e) => {
+
+    if (e.target === imageModal) {
+
+        imageModal.classList.remove("active");
+        modalImage.src = "";
+
+    }
+
 });
 
-document
-.querySelector(".close-video")
-.addEventListener("click",()=>{
+modal.addEventListener("click", (e) => {
 
-    modal.classList.remove("active");
+    if (e.target === modal) {
 
-    player.src="";
+        modal.classList.remove("active");
+        player.src = "";
+
+    }
 
 });
