@@ -1,12 +1,20 @@
 const menuButton = document.querySelector(".menu-button");
 const mobileMenu = document.querySelector(".mobile-menu");
 
+// ====================
 // Menú hamburguesa
+// ====================
+
 if (menuButton && mobileMenu) {
+
     menuButton.addEventListener("click", () => {
+
         mobileMenu.classList.toggle("active");
+
     });
+
 }
+
 
 // ====================
 // Modal de videos
@@ -16,6 +24,8 @@ const cards = document.querySelectorAll(".video-card, .video-card-2");
 const modal = document.querySelector(".video-modal");
 const player = document.querySelector("#youtubePlayer");
 const closeVideo = document.querySelector(".close-video");
+const modalContent = document.querySelector(".modal-content");
+
 
 if (cards.length && modal && player) {
 
@@ -35,6 +45,9 @@ if (cards.length && modal && player) {
 
 }
 
+
+// Cerrar con botón X
+
 if (closeVideo && modal && player) {
 
     closeVideo.addEventListener("click", () => {
@@ -47,6 +60,26 @@ if (closeVideo && modal && player) {
 
 }
 
+
+// Cerrar clickeando fuera del video
+
+if (modal && modalContent) {
+
+    modal.addEventListener("click", (e) => {
+
+        if (e.target === modal) {
+
+            modal.classList.remove("active");
+
+            player.src = "";
+
+        }
+
+    });
+
+}
+
+
 // ====================
 // Galería de fotos
 // ====================
@@ -55,6 +88,7 @@ const galleryItems = document.querySelectorAll(".gallery-item");
 const imageModal = document.querySelector(".image-modal");
 const modalImage = document.querySelector("#modalImage");
 const closeImage = document.querySelector(".close-image");
+
 
 if (galleryItems.length && imageModal && modalImage) {
 
@@ -74,6 +108,9 @@ if (galleryItems.length && imageModal && modalImage) {
 
 }
 
+
+// Cerrar imagen con botón X
+
 if (closeImage && imageModal && modalImage) {
 
     closeImage.addEventListener("click", () => {
@@ -86,24 +123,21 @@ if (closeImage && imageModal && modalImage) {
 
 }
 
-imageModal.addEventListener("click", (e) => {
 
-    if (e.target === imageModal) {
+// Cerrar imagen clickeando fuera
 
-        imageModal.classList.remove("active");
-        modalImage.src = "";
+if (imageModal && modalImage) {
 
-    }
+    imageModal.addEventListener("click", (e) => {
 
-});
+        if (e.target === imageModal) {
 
-modal.addEventListener("click", (e) => {
+            imageModal.classList.remove("active");
 
-    if (e.target === modal) {
+            modalImage.src = "";
 
-        modal.classList.remove("active");
-        player.src = "";
+        }
 
-    }
+    });
 
-});
+}
