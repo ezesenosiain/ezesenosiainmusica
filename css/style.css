@@ -427,6 +427,10 @@ font-size: 2rem;
 cursor: pointer;
 }
 
+.shows-section {
+padding-bottom: 5rem;
+}
+
 .event {
 width: 100%;
 padding: 0 10rem;
