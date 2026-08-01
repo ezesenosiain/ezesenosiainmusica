@@ -183,10 +183,6 @@ animation-delay: 15s;
 }
 }
 
-.music-section {
-padding-top: 2rem;
-}
-
 .all-music-card {
 display: flex;
 flex-direction: column;
@@ -443,6 +439,10 @@ font-size: 2rem;
 cursor: pointer;
 }
 
+.shows-section {
+margin-bottom: 2rem;
+}
+
 .event {
 width: 100%;
 padding: 0 10rem;
@@ -487,7 +487,7 @@ flex-direction: column;
 background-color: #212023;
 display: flex;
 justify-content: center;
-margin-top: 5rem;
+margin-top: 3.5rem;
 height: 3rem;
 align-items: center;
 }
@@ -519,7 +519,7 @@ padding: 0 1rem;
 }
 
 .hero {
-height: 85vh;
+height: 80vh;
 }
 
 .cards-music {
