@@ -133,9 +133,10 @@ background: #4b4878;
 
 .hero {
 position: relative;
-height: 85vh;
+height: 100vh;
 overflow: hidden;
 background: #090909;
+margin-bottom: -2rem;
 }
 
 .slide {
@@ -180,6 +181,10 @@ animation-delay: 15s;
 30% {
   opacity: 0;
 }
+}
+
+.music-section {
+padding-top: 2rem;
 }
 
 .all-music-card {
@@ -264,7 +269,7 @@ height: 2rem;
 .button-container {
 display: flex;
 justify-content: center;
-margin: 1rem 0rem 5rem 0rem;
+margin: 1rem 0rem 1.5rem 0rem;
 }
 
 .button {
@@ -438,11 +443,6 @@ font-size: 2rem;
 cursor: pointer;
 }
 
-.shows-section {
-padding-bottom: 5rem;
-}
-
-
 .event {
 width: 100%;
 padding: 0 10rem;
@@ -516,6 +516,10 @@ transform: translateY(25px);
 @media(max-width:1024px) {
 .navbar-container {
 padding: 0 1rem;
+}
+
+.hero {
+height: 85vh;
 }
 
 .cards-music {
@@ -594,10 +598,6 @@ display: block;
 
 .navbar-list {
 display: none;
-}
-
-.hero {
-height: 60vh;
 }
 
 .line-event {
