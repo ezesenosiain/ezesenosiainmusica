@@ -492,6 +492,27 @@ height: 3rem;
 align-items: center;
 }
 
+.reveal {
+opacity: 0;
+transform: translateY(40px);
+transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+.cards-music .reveal,
+.cards-video .reveal,
+.gallery .reveal {
+transition-delay: var(--delay);
+}
+
+.title-container.reveal {
+transform: translateY(25px);
+}
+
 @media(max-width:1024px) {
 .navbar-container {
 padding: 0 1rem;

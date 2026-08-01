@@ -186,3 +186,86 @@ mobileLinks.forEach(link => {
     });
 
 });
+
+// ====================
+// Animaciones al aparecer con scroll
+// ====================
+
+
+const animatedElements = [
+
+    ".title-container",
+    ".event",
+    ".card-music-container",
+    ".video-card",
+    ".video-card-2",
+    ".gallery-item",
+    ".bio-content"
+
+];
+
+
+animatedElements.forEach(selector => {
+
+    const elements = document.querySelectorAll(selector);
+
+
+    elements.forEach((element, index) => {
+
+        element.classList.add("reveal");
+
+
+        // Delay para efectos escalonados
+        if (
+            selector === ".card-music-container" ||
+            selector === ".video-card-2" ||
+            selector === ".gallery-item"
+        ) {
+
+            element.style.setProperty(
+                "--delay",
+                `${index * 0.12}s`
+            );
+
+        }
+
+    });
+
+});
+
+
+
+const observer = new IntersectionObserver(
+    
+    entries => {
+
+        entries.forEach(entry => {
+
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+
+        });
+
+    },
+
+    {
+        threshold: 0.15
+    }
+
+);
+
+
+
+document.querySelectorAll(".reveal")
+.forEach(element => {
+
+    observer.observe(element);
+
+});
