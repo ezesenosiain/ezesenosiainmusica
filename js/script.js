@@ -141,3 +141,48 @@ if (imageModal && modalImage) {
     });
 
 }
+
+// ====================
+// Mostrar / ocultar navbar al hacer scroll
+// ====================
+
+const navbar = document.querySelector("nav");
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+    // Siempre visible cuando está arriba de todo
+    if (currentScroll <= 0) {
+        navbar.classList.remove("hide");
+        return;
+    }
+
+    // Si baja, ocultar
+    if (currentScroll > lastScroll) {
+        navbar.classList.add("hide");
+    }
+    // Si sube, mostrar
+    else {
+        navbar.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+
+});
+
+// Cerrar menú móvil al seleccionar una opción
+
+const mobileLinks = document.querySelectorAll(".mobile-menu a");
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});

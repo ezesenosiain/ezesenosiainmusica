@@ -19,6 +19,7 @@ font-style: normal;
 
 .page-content {
 flex: 1;
+padding-top: 4rem;
 }
 
 nav {
@@ -26,6 +27,16 @@ height: 4rem;
 background: #090909;
 display: flex;
 align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+transition: transform 0.3s ease;
+}
+
+nav.hide {
+transform: translateY(-100%);
 }
 
 .navbar-container {
@@ -430,6 +441,7 @@ cursor: pointer;
 .shows-section {
 padding-bottom: 5rem;
 }
+
 
 .event {
 width: 100%;
